@@ -1,0 +1,51 @@
+# Tang Nano 4K - Adaptive Sonar
+# Proposed pin mapping; wire the circuit to match these assignments.
+
+# Onboard 27 MHz clock
+IO_LOC "clk" 45;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+# External active-high reset
+IO_LOC "reset" 43;
+IO_PORT "reset" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+# MCP3208 SPI interface
+IO_LOC "adc_miso" 39;
+IO_PORT "adc_miso" IO_TYPE=LVCMOS33;
+
+IO_LOC "adc_cs" 40;
+IO_PORT "adc_cs" IO_TYPE=LVCMOS33;
+
+IO_LOC "adc_mosi" 41;
+IO_PORT "adc_mosi" IO_TYPE=LVCMOS33;
+
+IO_LOC "adc_sclk" 42;
+IO_PORT "adc_sclk" IO_TYPE=LVCMOS33;
+
+# DAC0800 8-bit parallel data bus
+# Pins 27-34 are assigned to the 2.5 V I/O bank.
+# Verify the bank voltage and logic compatibility before use.
+
+IO_LOC "dac_data[0]" 27;
+IO_PORT "dac_data[0]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[1]" 28;
+IO_PORT "dac_data[1]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[2]" 29;
+IO_PORT "dac_data[2]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[3]" 30;
+IO_PORT "dac_data[3]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[4]" 31;
+IO_PORT "dac_data[4]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[5]" 32;
+IO_PORT "dac_data[5]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[6]" 33;
+IO_PORT "dac_data[6]" IO_TYPE=LVCMOS25;
+
+IO_LOC "dac_data[7]" 34;
+IO_PORT "dac_data[7]" IO_TYPE=LVCMOS25;
